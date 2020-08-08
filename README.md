@@ -17,10 +17,10 @@ The data can be found [here](https://www.kaggle.com/c/silero-audio-classifier/da
 
 # Quick description
 
-- `silero-1d-classification.ipynb` is a notebook with a solution trained on Mel specters (not spectrograms) of the audio. It achieves 95% accuracy on validation and works very fast, the model is small. Unfortunately, I haven't spend enough time to investigate if the accuracy can be increased further by optimizing the hyperparameters.
+- `silero-1d-classification.ipynb` is a notebook with a solution trained on Mel specters (not spectrograms) of the audio. It achieves 95% accuracy on validation while trained on 1% of the data and works very fast, model is small. Unfortunately, I haven't spend enough time to investigate if the accuracy can be increased further by optimizing the hyperparameters.
 
-- `silero-2d-classification.ipynb` is a notebook with a solution trained on Mel spectrograms. It achieves almost 98% accuracy on test.
+- `silero-2d-classification.ipynb` is a notebook with a solution trained on Mel spectrograms. It achieves almost 98% accuracy on test while trained on 10% of the data.
 
 - `silero-2d-clusterization.ipynb` is a notebook with a clusterization solution trained on Mel spectrograms.
 
-  Some pre-trained models can be found in the `models` directory.
+  Some pre-trained models can be found in the `models` directory, although I didn't save them systematically.

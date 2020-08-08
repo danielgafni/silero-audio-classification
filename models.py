@@ -4,7 +4,7 @@ import torch.nn.functional as F
 
 
 class FreqNet(nn.Module):
-    def __init__(self):
+    def __init__(self, N):
         super(FreqNet, self).__init__()
         # head
         self.conv = nn.Conv1d(1, 64, 5, stride=3)
@@ -45,7 +45,6 @@ class FreqNet(nn.Module):
 
     def forward(self, x):
         batch_size = x.size(0)
-        x = x.to(device)
         # head
         x = self.conv(x)
         x = self.batchnorm(x)
@@ -100,7 +99,7 @@ class SpecNet(nn.Module):
     """
     def __init__(self, N):
         super(SpecNet, self).__init__()
-        self.device = torch.device('cuda:0') if torch.cuda.is_available() else torch.device('cpu')
+
         # head
         self.conv = nn.Conv2d(1, 64, 5, stride=3)
         self.batchnorm = nn.BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
@@ -140,7 +139,6 @@ class SpecNet(nn.Module):
 
     def forward(self, x):
         batch_size = x.size(0)
-        x = x.to(self.device)
         # head
         x = self.conv(x)
         x = self.batchnorm(x)
@@ -303,12 +301,3 @@ class SpecNetSmall(nn.Module):
         #         x = F.log_softmax(x, dim=1)
 
         return x
-
-
-class ResBlock(nn.Module):
-    def __init__(self, n_in, n_out, k, s, p):
-        super(ResBlock, self).__init__()
-
-        self.mini_block_1 = nn.Sequential(
-
-        )
