@@ -158,6 +158,5 @@ cython_debug/
 /val/
 /train.csv
 /submission.csv
-/sample_submission.csv
 /public_eda.ipynb
 /models/tmp/

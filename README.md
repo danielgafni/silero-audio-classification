@@ -13,7 +13,7 @@ jupyter lab
 
 ## Organize the project structure
 
-The data can be found [here](https://www.kaggle.com/c/silero-audio-classifier/data). Download it. Executed scripts and notebooks are expecting to find the directories 'train', 'val' and the 'train.csv' file at the top level of the project.
+The data can be found [here](https://www.kaggle.com/c/silero-audio-classifier/data). Download it. Executed scripts and notebooks are expecting to find `train`, `val`, `train.csv` and `sample_submission.csv` at the top level of the project.
 
 # Quick description
 
